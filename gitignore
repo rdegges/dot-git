@@ -1,0 +1,8 @@
+# Vim swap files.
+.*.swp
+
+# Python bytecode.
+*.py[co]
+
+# All auto-env files.
+.env
