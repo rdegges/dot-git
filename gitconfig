@@ -1,0 +1,110 @@
+# Enable color everywhere possible.
+[color]
+    ui = true
+
+# Always push to the current branch by default.
+[push]
+    default = current
+
+# Use relative dates for the git log.  Looks way nicer.
+[log]
+    date = relative
+
+# Git aliases to make life easier.
+[alias]
+
+    # `git add` aliases.
+    a = add                         # Add.
+    aa = add --all                  # Stage all files recursively.
+    ap = add --patch                # Stage commits by chunk.
+
+    # `git branch` aliases.
+    b = branch -v                   # Verbose branch.
+
+    # `git commit` aliases.
+    c = commit -m                   # Commit with message.
+    ca = commit -am                 # Commit all with message.
+    ci = commit                     # Commit.
+    amend = commit --amend          # Amend last commit.
+
+    # `git checkout` aliases.
+    co = checkout                   # Checkout.
+    nb = checkout -b                # Create a new branch, and switch to it.
+
+    # `git cherry-pick` aliases.
+    cp = cherry-pick -x             # Grab a change from a branch.
+
+    # `git diff` aliases.
+    d = diff                        # Diff unstaged changes.
+    dc = diff --cached              # Diff staged changes.
+    last = diff HEAD^               # Diff last committed changes.
+
+    # `git log` aliases.
+    log = log --decorate --graph --date=short
+    l = log
+    changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+    short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+    changelog = log --pretty=format:\" * %s\"
+    shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+
+    # `git pull` aliases.
+    pl = pull                       # Pull.
+
+    # `git push` aliases.
+    ps = push                       # Push.
+
+    # `git rebase` aliases.
+    rc = rebase --continue          # Continue rebase.
+    rs = rebase --skip              # Skip rebase.
+
+    # `git remote` aliases.
+    r = remote -v                   # Show remotes (verbose).
+
+    # `git reset` aliases.
+    unstage = reset HEAD            # Remove files from index (tracking).
+    uncommit = reset --soft HEAD^   # Go back before last commit, with files in uncommitted state.
+    filelog = log -u                # Show changes to a file.
+    mt = mergetool                  # Fire up the merge tool.
+
+    # `git stash` aliases.
+    ss = stash                      # Stash changes.
+    sl = stash list                 # List stashes.
+    sa = stash apply                # Apply stash (restore changes).
+    sd = stash drop                 # Drop stashes (destory changes).
+
+    # `git status` aliases.
+    s = status                      # Status.
+
+    # `git tag` aliases.
+    t = tag -n                      # Show tags with <n> lines of each tag message.
+
+# Custom output formats.
+[format]
+    pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+
+# Git merge configuration.
+[merge]
+    summary = true
+    verbosity = 1
+
+# Git apply rules.
+[apply]
+    whitespace = nowarn             # Don't notify us about whitespace when applying patches.
+
+# Git branch rules.
+[branch]
+    autosetupmerge = true           # Make merging simple.
+
+# Git push rules.
+[push]
+    default = tracking              # Only push the current branch.
+
+# Git core configuration.
+[core]
+    autocrlf = input                # Convert CRLF -> LF during commit.
+    editor = vim                    # Use Vim for editing.
+    excludesfile = ~/.git/gitignore
+                                    # Global list of files to ignore.
+
+[rerere]
+    enabled = true                  # Remember merges.
