@@ -6,3 +6,9 @@
 
 # All auto-env files.
 .env
+
+# Node modules.
+node_modules
+
+# Bower components.
+bower_components
