@@ -105,7 +105,10 @@
     autocrlf = input                # Convert CRLF -> LF during commit.
     editor = vim                    # Use Vim for editing.
     excludesfile = ~/.git/gitignore
+	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
                                     # Global list of files to ignore.
 
 [rerere]
     enabled = true                  # Remember merges.
+[commit]
+	gpgsign = true
