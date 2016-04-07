@@ -52,6 +52,7 @@
 
     # `git push` aliases.
     ps = push                       # Push.
+    phm = push heroku master        # Push to Heroku.
 
     # `git rebase` aliases.
     rc = rebase --continue          # Continue rebase.
