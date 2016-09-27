@@ -7,6 +7,9 @@
 # All auto-env files.
 .env
 
+# Pyenv files.
+.python-version
+
 # Node modules.
 node_modules
 
