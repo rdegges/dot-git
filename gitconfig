@@ -112,3 +112,5 @@
     enabled = true                  # Remember merges.
 [commit]
 	gpgsign = true
+[submodule]
+	fetchJobs = 4
