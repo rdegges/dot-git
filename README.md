@@ -15,8 +15,9 @@ operating system.
 
 
 ``` bash
-$ git clone git@github.com:rdegges/dot-git.git ~/.git
-$ ln -s ~/.git/gitconfig ~/.gitconfig
-$ git config --global user.email "r@rdegges.com"
-$ git config --global user.name "Randall Degges"
+sudo apt install git
+git clone git@github.com:rdegges/dot-git.git ~/.git
+ln -s ~/.git/gitconfig ~/.gitconfig
+git config --global user.email "r@rdegges.com"
+git config --global user.name "Randall Degges"
 ```
