@@ -10,9 +10,6 @@ like.
 
 The below commands will download the project, and setup Git.
 
-**NOTE**: These instructions assume you already have `git` installed on your
-operating system.
-
 
 ``` bash
 sudo apt install git
